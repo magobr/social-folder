@@ -1,0 +1,10 @@
+body{
+    background: linear-gradient(180deg, #0097E6 50%, rgba(68, 189, 50, 0.42) 100%, rgba(68, 189, 50, 0.42) 100%);
+    width: 100vw;
+    height: 100vh;
+    mix-blend-mode: normal;
+}
+
+input {
+    font-family: 'Helvetica', FontAwesome, sans-serif;
+}
