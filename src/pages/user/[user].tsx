@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'
 
 import Avatar from '../../components/Avatar';
 import SocialLink from '../../components/SocialLink';
@@ -21,6 +22,8 @@ type user = {
 const User = () => {
 
   const [usuario, setUsuario] = useState<user>();
+  const router = useRouter()
+  const slug = router.query.user
 
   useEffect(()=>{
     return setUsuario(user.user);
