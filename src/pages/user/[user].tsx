@@ -15,6 +15,7 @@ interface social {
 
 type user = { 
   name: string;
+  nickname: string;
   avatar: string;
   social?: Array<social>;
 }
@@ -52,7 +53,8 @@ const User = () => {
           <Avatar 
             style={''}
             name={usuario?.name}
-            image={usuario?.avatar == "" ? undefined : usuario?.avatar}
+            image={usuario?.avatar == "" ? undefined : usuario?.avatar} 
+            nickname={usuario?.nickname}
           />
         </div>
 

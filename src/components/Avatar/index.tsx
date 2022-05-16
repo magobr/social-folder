@@ -7,6 +7,7 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 type Props = {
     style?: string
     name:string | undefined
+    nickname:string | undefined
     image: string | undefined
 }
 
@@ -24,6 +25,9 @@ const Avatar = (props:Props) => {
         </div>
         <div className={`${props.style} py-4 font-bold text-white text-xl w-52 text-center`}>
             {props.name}
+        </div>
+        <div className="font-semibold text-white text-xl w-52 text-center italic">
+            {props.nickname}
         </div>
     </div>    
   )
