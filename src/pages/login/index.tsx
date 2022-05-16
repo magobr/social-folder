@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
-
 import React, { useState } from 'react';
-
-import 'font-awesome/css/font-awesome.min.css';
 
 import Logo from '../../components/Logo';
 import Input from '../../components/Inputs';
 
-const Home: NextPage = () => {
+
+import 'font-awesome/css/font-awesome.min.css';
+
+const Login = () => {
 
   const [term, setTerm] = useState({});
 
@@ -50,7 +49,7 @@ const Home: NextPage = () => {
           <Input 
             type="submit"
             name="btn-login"
-            bgbutton="bg-violet-500"
+            bgbutton="bg-violet-500 hover:bg-violet-600 duration-150 active:bg-violet-800"
             value="&#xf090; Entrar"
           />
         </div>   
@@ -60,4 +59,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Login
