@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { faFacebookF, faGoogle } from '@fortawesome/free-brands-svg-icons';
+
 import Logo from '../../components/Logo';
 import Input from '../../components/Inputs';
+import Button from '../../components/Button';
 
 
 import 'font-awesome/css/font-awesome.min.css';
@@ -36,13 +41,13 @@ const Login = () => {
           <Input 
             type="text"
             name="usuario"
-            placeholder="&#xf007; Usuário"
+            placeholder="&#xf007;  Usuário"
             onChange={handleChange}
           />
           <Input 
             type="password"
             name="senha"
-            placeholder="&#xf084; Senha"
+            placeholder="&#xf084;  Senha"
             onChange={handleChange}
           />
 
@@ -54,7 +59,36 @@ const Login = () => {
           />
         </div>   
       </form>
-      
+
+      <div className="flex justify-center mb-3">
+        <div className="w-[250px] h-[1px] bg-white"></div>
+      </div>
+
+      <div className="flex justify-center mb-8 mt-8">
+        <a href="" className="font-bold text-white hover:text-black duration-150">Cadastre-se</a>
+      </div>
+
+      <div className="flex justify-center items-center self-center flex-col mb-3">
+        <Button 
+          name="Facebook"
+          value="Facebook"
+          id="Facebook"
+          icon={<FontAwesomeIcon icon={faFacebookF as IconProp}/>}
+          styleCustom="hover:bg-indigo-500"
+        />
+        <Button 
+          name="Google"
+          value="Google"
+          id="Google"
+          icon={<FontAwesomeIcon icon={faGoogle as IconProp}/>}
+          styleCustom="hover:bg-red-600"
+        />
+      </div>
+
+      <div className="flex justify-center mb-8 mt-8">
+        <a href="" className="font-bold underline text-white hover:text-black duration-150">Esqueceu a Senha?</a>
+      </div>
+
     </div>
   )
 }
