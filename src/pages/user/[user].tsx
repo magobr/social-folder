@@ -8,8 +8,8 @@ import user from "../../mock/user.js" //Dados Mocados
 import 'font-awesome/css/font-awesome.min.css';
 
 interface social {
-    name: string,
-    link: string
+  name: string,
+  link: string
 }
 
 
@@ -51,7 +51,6 @@ const User = () => {
       <div className="flex flex-col justify-center mb-12">
         <div className="mt-20">
           <Avatar 
-            style={''}
             name={usuario?.name}
             image={usuario?.avatar == "" ? undefined : usuario?.avatar} 
             nickname={usuario?.nickname}
