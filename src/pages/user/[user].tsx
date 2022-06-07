@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 import Avatar from '../../components/Avatar';
 import SocialLink from '../../components/SocialLink';
-import user from "../../mock/user.js" //Dados Mocados
+import userMock from "../../mock/user.js" //Dados Mocados
 
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -27,7 +27,7 @@ const User = () => {
   const slug = router.query.user
 
   useEffect(()=>{
-    return setUsuario(user.user);
+    return setUsuario(userMock.user);
   },[])
 
   const SocialLinks = ():JSX.Element =>{
