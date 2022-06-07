@@ -5,13 +5,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLElement>{
   value: string;
   id: string;
   icon?: any;
-  styleCustom?: string;
+  styleCustom?: string | undefined;
 }
 
-const Button: React.FC<ButtonProps> = (props) => {
+const Button: React.FC<ButtonProps> = (props): JSX.Element=> {
+  const { name, value, id, icon, styleCustom, ...rest} = props;
   return (
     <div className="mb-4">
-      <button className={`${props.styleCustom} word-space duration-150 font-bold bg-white hover:text-white w-64 rounded-md h-9 text-center px-5`} {...props}>{props.icon} {props.value}</button>
+      <button {...rest} className={`${styleCustom} word-space duration-150 font-bold bg-white hover:text-white w-64 rounded-md h-9 text-center px-5`}>{icon} {value}</button>
     </div>
   )
 }
