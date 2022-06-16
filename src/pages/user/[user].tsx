@@ -8,6 +8,7 @@ import userMock from "../../mock/user.js" //Dados Mocados
 import 'font-awesome/css/font-awesome.min.css';
 
 interface social {
+  uuid: string,
   name: string,
   link: string
 }
@@ -36,7 +37,7 @@ const User = () => {
         {usuario?.social?.map((_dados)=>{
           return (
             <SocialLink 
-              key={_dados.name}
+              key={_dados.uuid}
               socialName={_dados.name}
               socialLink={_dados.link} 
             />
