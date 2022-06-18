@@ -88,8 +88,8 @@ const Cadastro = () => {
           <Input 
             type="submit"
             name="btn-login"
-            bgbutton="bg-violet-500 hover:bg-violet-600 duration-150 active:bg-violet-800"
-            value="&#xf090; Entrar"
+            bgbutton="bg-[#27ae60] hover:bg-[#2ecc71] duration-150 active:bg-[#2ecc71]"
+            value="&#xf090; Cadastrar"
           />
         </div>   
       </form>
