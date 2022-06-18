@@ -13,7 +13,7 @@ const Input: React.FC<InputProps> = (props) => {
 
   return (
     <div className={!props.margin ? 'mb-9' : props.margin }>
-      <input {...props} className={`${props.type !== "submit" ? "bg-transparent focus:border-slate-400" : props.bgbutton} text-sm p-2 w-64 border border-solid border-slate-50 placeholder:text-slate-200 placeholder:font-bold font-bold text-slate-50 rounded-md`} />
+      <input {...props} className={`${props.type !== "submit" ? "bg-transparent focus:border-slate-400" : props.bgbutton} text-sm p-2 w-64 border border-solid border-slate-50 placeholder:text-slate-200 text-slate-50 rounded-md`} />
     </div>
   )
 }
