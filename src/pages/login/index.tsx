@@ -91,7 +91,7 @@ const Login = () => {
           value="Google"
           id="Google"
           icon={<FontAwesomeIcon icon={faGoogle as IconProp}/>}
-          styleCustom="hover:bg-red-600"
+          styleCustom="hover:bg-[#e74c3c]"
         />
       </div>
 

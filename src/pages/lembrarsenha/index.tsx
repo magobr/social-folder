@@ -61,7 +61,7 @@ const LembrarSenha = () => {
             type="submit"
             name="btn-login"
             bgbutton="bg-violet-500 hover:bg-violet-600 duration-150 active:bg-violet-800"
-            value="&#xf090; Entrar"
+            value="&#xf090; Enviar"
           />
         </div>   
       </form>
