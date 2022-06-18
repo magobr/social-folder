@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Link from 'next/link'
 import Router from 'next/router'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,26 +11,20 @@ import Input from '../../components/Inputs';
 import 'font-awesome/css/font-awesome.min.css';
 
 type dadosForm = {
-    usuario: string,
-    email: string,
-    senha: string,
-    confirmar_senha: string
+  email: string
 }
 
-const Cadastro = () => {
+const LembrarSenha = () => {
 
   const [term, setTerm] = useState<dadosForm>({
-    usuario: '',
-    email: '',
-    senha: '',
-    confirmar_senha: ''
+    email: ''
   });
 
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (term.senha === term.confirmar_senha) {
-        console.log(term)
-        return
+    if (term.email !== "") {
+      console.log(term)
+      return
     }
 
     console.log("error")
@@ -40,8 +33,8 @@ const Cadastro = () => {
   const handleChange = (event: React.FormEvent<HTMLElement>) =>{
     const { name, value }: any = event.target;
     setTerm(prevState => ({
-        ...prevState,
-        [name]: value
+      ...prevState,
+      [name]: value
     }));
   }
 
@@ -58,29 +51,8 @@ const Cadastro = () => {
         <div className="w-full flex justify-center flex-col items-center">
           <Input 
             type="text"
-            name="usuario"
-            placeholder="&#xf007;  Usuário"
-            onChange={handleChange}
-            margin="mb-5"
-          />
-          <Input 
-            type="text"
             name="email"
             placeholder="&#xf007;  E-mail"
-            onChange={handleChange}
-            margin="mb-5"
-          />
-          <Input 
-            type="password"
-            name="senha"
-            placeholder="&#xf084;  Senha"
-            onChange={handleChange}
-            margin="mb-5"
-          />
-          <Input 
-            type="password"
-            name="confirmar_senha"
-            placeholder="&#xf084;  Confirme a Senha"
             onChange={handleChange}
             margin="mb-5"
           />
@@ -88,8 +60,8 @@ const Cadastro = () => {
           <Input 
             type="submit"
             name="btn-login"
-            bgbutton="bg-[#27ae60] hover:bg-[#2ecc71] duration-150 active:bg-[#2ecc71]"
-            value="&#xf090; Cadastrar"
+            bgbutton="bg-violet-500 hover:bg-violet-600 duration-150 active:bg-violet-800"
+            value="&#xf090; Entrar"
           />
         </div>   
       </form>
@@ -97,4 +69,4 @@ const Cadastro = () => {
   )
 }
 
-export default Cadastro
+export default LembrarSenha

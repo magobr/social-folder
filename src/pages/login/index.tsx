@@ -9,12 +9,19 @@ import Logo from '../../components/Logo';
 import Input from '../../components/Inputs';
 import Button from '../../components/Button';
 
+type dadosForm = {
+  usuario: string,
+  senha: string
+}
 
 import 'font-awesome/css/font-awesome.min.css';
 
 const Login = () => {
 
-  const [term, setTerm] = useState({});
+  const [term, setTerm] = useState<dadosForm>({
+    usuario: '',
+    senha: ''
+  });
 
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
